@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="cysa-pbq.css">
+<meta charset="UTF-8">
+<title>Network+ PBQ Suite</title>
+
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pbq-nav">
+    <a href="index.html">← All PBQs</a>
+    <a href="network-plus-pbq-suite.html#net" class="current" data-panel-link="net">1 · Subnetting</a>
+    <a href="network-plus-pbq-suite.html#impl" data-panel-link="impl">2 · Cabling &amp; Ports</a>
+    <a href="network-plus-pbq-suite.html#trouble" data-panel-link="trouble">3 · Troubleshooting</a>
+    <a href="network-plus-pbq-suite.html#sec" data-panel-link="sec">4 · Network Security</a>
+  </nav>
+
+  <div class="banner">
+    <div class="tag">PBQ SIMULATOR SUITE · N10-009 PRACTICE</div>
+    <h1>Network+ Performance-Based Question Practice — All 4 Domains</h1>
+    <p>One tab per exam domain: Networking Concepts, Network Implementation, Network Troubleshooting, and Network Security. All scenarios follow the same fictional site build-out at Pinecrest Logistics.</p>
+  </div>
+
+  <div class="tabs" id="tabs">
+    <button class="tab-btn active" data-panel="net">1 · Subnetting</button>
+    <button class="tab-btn" data-panel="impl">2 · Cabling &amp; Ports</button>
+    <button class="tab-btn" data-panel="trouble">3 · Troubleshooting</button>
+    <button class="tab-btn" data-panel="sec">4 · Network Security</button>
+  </div>
+
+  <!-- ============ TAB 1: SUBNETTING & ADDRESSING ============ -->
+  <div class="panel active" id="panel-net">
+    <div class="scenario">
+      <strong>Pinecrest Logistics</strong> has been assigned <strong>192.168.10.0/24</strong> for its new distribution center. Using VLSM, assign each segment the <strong>smallest subnet (highest CIDR)</strong> that still covers its host requirement — the goal is to satisfy the need without wasting address space.
+    </div>
+
+    <p class="task-label">SEGMENT REQUIREMENTS — choose a CIDR for each</p>
+    <table id="subnet-table">
+      <thead><tr><th style="width:22px"></th><th>Segment</th><th>Hosts Needed</th><th style="width:170px">Subnet (CIDR)</th></tr></thead>
+      <tbody id="subnet-body"></tbody>
+    </table>
+
+    <div class="controls">
+      <button class="act btn-primary" id="subnet-submit">Submit for grading</button>
+      <button class="act btn-ghost" id="subnet-reset">Reset</button>
+    </div>
+    <div class="score-panel" id="subnet-score">
+      <div class="score-head"><span class="score-num" id="subnet-score-num">0/0</span><span class="score-sub">correct</span></div>
+      <div class="score-msg" id="subnet-score-msg"></div>
+    </div>
+
+    <p class="task-label" style="margin-top:24px;">FOLLOW-UP QUESTIONS</p>
+    <div id="subnet-quiz-block"></div>
+
+    <div class="controls">
+      <button class="act btn-primary" id="subnetquiz-submit">Submit for grading</button>
+      <button class="act btn-ghost" id="subnetquiz-reset">Reset</button>
+    </div>
+    <div class="score-panel" id="subnetquiz-score">
+      <div class="score-head"><span class="score-num" id="subnetquiz-score-num">0/0</span><span class="score-sub">correct</span></div>
+      <div class="score-msg" id="subnetquiz-score-msg"></div>
+    </div>
+  </div>
+
+  <!-- ============ TAB 2: CABLING & PORTS ============ -->
+  <div class="panel" id="panel-impl">
+    <div class="scenario">
+      Facilities is finalizing the physical layer for the distribution center and the WAN link back to HQ. Match each requirement to the cable and connector that actually fits the distance, bandwidth, and environment involved.
+    </div>
+
+    <p class="task-label">PART A — CABLE &amp; CONNECTOR SELECTION</p>
+    <table id="cable-table">
+      <thead><tr><th style="width:22px"></th><th>Requirement</th><th>Distance / Notes</th><th style="width:220px">Cable &amp; Connector</th></tr></thead>
+      <tbody id="cable-body"></tbody>
+    </table>
+
+    <div class="controls">
+      <button class="act btn-primary" id="cable-submit">Submit for grading</button>
+      <button class="act btn-ghost" id="cable-reset">Reset</button>
+    </div>
+    <div class="score-panel" id="cable-score">
+      <div class="score-head"><span class="score-num" id="cable-score-num">0/0</span><span class="score-sub">correct</span></div>
+      <div class="score-msg" id="cable-score-msg"></div>
+    </div>
+
+    <p class="task-label" style="margin-top:24px;">PART B — WELL-KNOWN PORTS</p>
+    <div id="ports-block"></div>
+
+    <div class="controls">
+      <button class="act btn-primary" id="ports-submit">Submit for grading</button>
+      <button class="act btn-ghost" id="ports-reset">Reset</button>
+    </div>
+    <div class="score-panel" id="ports-score">
+      <div class="score-head"><span class="score-num" id="ports-score-num">0/0</span><span class="score-sub">correct</span></div>
+      <div class="score-msg" id="ports-score-msg"></div>
+    </div>
+  </div>
+
+  <!-- ============ TAB 3: TROUBLESHOOTING ============ -->
+  <div class="panel" id="panel-trouble">
+    <div class="scenario">
+      Users at the distribution center are reporting intermittent connectivity. Work the problem using <strong>CompTIA's structured troubleshooting methodology</strong> — order the steps correctly, then match the right tool to each situation below.
+    </div>
+
+    <p class="task-label">PART A — DRAG TO ORDER, FIRST STEP AT THE TOP</p>
+    <ul class="sortable" id="method-list"></ul>
+
+    <div class="controls">
+      <button class="act btn-primary" id="method-submit">Submit for grading</button>
+      <button class="act btn-ghost" id="method-reset">Reset</button>
+    </div>
+    <div class="score-panel" id="method-score">
+      <div class="score-head"><span class="score-num" id="method-score-num">0/0</span><span class="score-sub">in correct position</span></div>
+      <div class="score-msg" id="method-score-msg"></div>
+    </div>
+
+    <p class="task-label" style="margin-top:24px;">PART B — PICK THE RIGHT TOOL</p>
+    <div id="tool-block"></div>
+
+    <div class="controls">
+      <button class="act btn-primary" id="tool-submit">Submit for grading</button>
+      <button class="act btn-ghost" id="tool-reset">Reset</button>
+    </div>
+    <div class="score-panel" id="tool-score">
+      <div class="score-head"><span class="score-num" id="tool-score-num">0/0</span><span class="score-sub">correct</span></div>
+      <div class="score-msg" id="tool-score-msg"></div>
+    </div>
+  </div>
+
+  <!-- ============ TAB 4: NETWORK SECURITY ============ -->
+  <div class="panel" id="panel-sec">
+    <div class="scenario">
+      Pinecrest wants a compromised warehouse scanner to never be able to reach the corporate LAN or a switch's management interface. Assign each device type to the correct VLAN, then answer four questions about the controls that enforce that segmentation.
+    </div>
+
+    <p class="task-label">PART A — ASSIGN EACH DEVICE TO A VLAN</p>
+    <table id="vlan-table">
+      <thead><tr><th style="width:22px"></th><th>Device</th><th>Notes</th><th style="width:230px">VLAN</th></tr></thead>
+      <tbody id="vlan-body"></tbody>
+    </table>
+
+    <div class="controls">
+      <button class="act btn-primary" id="vlan-submit">Submit for grading</button>
+      <button class="act btn-ghost" id="vlan-reset">Reset</button>
+    </div>
+    <div class="score-panel" id="vlan-score">
+      <div class="score-head"><span class="score-num" id="vlan-score-num">0/0</span><span class="score-sub">correct</span></div>
+      <div class="score-msg" id="vlan-score-msg"></div>
+    </div>
+
+    <p class="task-label" style="margin-top:24px;">PART B — NAME THE CONTROL</p>
+    <div id="secconcept-block"></div>
+
+    <div class="controls">
+      <button class="act btn-primary" id="secconcept-submit">Submit for grading</button>
+      <button class="act btn-ghost" id="secconcept-reset">Reset</button>
+    </div>
+    <div class="score-panel" id="secconcept-score">
+      <div class="score-head"><span class="score-num" id="secconcept-score-num">0/0</span><span class="score-sub">correct</span></div>
+      <div class="score-msg" id="secconcept-score-msg"></div>
+    </div>
+  </div>
+
+  <div class="footnote">
+    Practice simulations modeled on the interaction styles CompTIA describes for Network+ PBQs (subnetting, cable/connector selection, ordered ranking, matching) — not official CompTIA items or pulled from the real exam bank. All four tabs follow one continuous site build-out at a fictional company, start to finish.
+  </div>
+
+    <div class="controls" style="justify-content:center;margin-top:18px;">
+      <a class="act btn-primary" id="back-pbqs" href="https://comptia.morninglightsolutions.com" target="_blank" rel="noopener">← Back to PBQs</a>
+    </div>
+
+</div>
+
+<script src="network-plus-pbq.js"></script>
+</body>
+</html>
